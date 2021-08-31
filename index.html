@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  <style>
+    :root {
+      --text-color-tertiary: #3F51B5;
+      --theme-color: #3F51B5;
+    }
+    body {
+      background-color: rgb(255,255,255);
+    }
+    video {
+      width: 100%;
+    }
+    figure {
+      text-align: center
+    }
+    .markdown-section pre,
+    .markdown-section code {
+      background-color: #f3f3f3;
+      word-wrap: break-word !important;
+      white-space: pre-wrap !important;
+    }
+    .markdown-section h1 {
+      font-size: 2em;
+    }
+    .markdown-section h2 {
+      font-size: 1.2em;
+      margin: 1.6rem 0 .8rem;
+    }
+    .docsify-pagination-container {
+      padding-bottom: 2rem;
+    }
+    @media screen and (max-width: 1300px) {
+      .nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '一八零柒食谱',
+      repo: '',
+      loadSidebar: true, // 加载侧边栏
+      loadNavbar: false, // 加载导航栏
+      maxLevel: 2, // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
+      subMaxLevel: 0, // 生成目录的最大层级
+      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏
+      pagination: { // 上下章节模块
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4',
+        title: '文章导航',
+      },
+      copyCode: {
+        buttonText: {
+          '/': '复制'
+        },
+        errorText: {
+          '/': '错误'
+        },
+        successText: {
+          '/': '成功'
+        },
+      },
+      markdown: {
+        renderer: {
+          image: function(href, title, text) {
+            // 按照原来的渲染 img
+            var image_html = this.origin.image.apply(this, arguments)
+            // 用 figure 包一下图片，实现居中
+            return '<figure>' + image_html + '<figcaption>' + text +
+              '</figcaption></figure>'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Docsify 插件 -->
+  <!-- 代码高亮配置 -->
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+  <!-- 一键拷贝代码 -->
+  <script src="//unpkg.com/docsify-copy-code"></script>
+  <!-- 添加上下章节模块 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 文章内导航 -->
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+  <!-- 一键复制代码 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+</body>
+</html>
