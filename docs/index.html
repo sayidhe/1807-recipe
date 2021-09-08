@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
   <style>
     :root {
-      --text-color-tertiary: #3F51B5;
-      --theme-color: #3F51B5;
+      --text-color-tertiary: #F7C244;
+      --theme-color: #F7C244;
     }
     body {
       background-color: rgb(255,255,255);
@@ -35,6 +35,9 @@
       font-size: 1.2em;
       margin: 1.6rem 0 .8rem;
     }
+    .markdown-section pre {
+      border-radius: 20px;
+    }
     .docsify-pagination-container {
       padding-bottom: 2rem;
     }
@@ -42,6 +45,9 @@
       .nav {
         display: none;
       }
+    }
+    img {
+      border-radius: 20px;
     }
   </style>
 </head>
@@ -95,18 +101,12 @@
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- Docsify 插件 -->
-  <!-- 代码高亮配置 -->
-  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
   <!-- 一键拷贝代码 -->
-  <script src="//unpkg.com/docsify-copy-code"></script>
+  <!-- <script src="//unpkg.com/docsify-copy-code"></script> -->
   <!-- 添加上下章节模块 -->
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 文章内导航 -->
   <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
-  <!-- 一键复制代码 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- Medium's 风格的图片缩放插件. 基于 medium-zoom。 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
