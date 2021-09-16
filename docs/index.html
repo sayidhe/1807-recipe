@@ -95,6 +95,14 @@
               '</figcaption></figure>'
           }
         }
+      },
+      search: 'auto', // default
+      search: {
+        placeholder: '搜索食材',
+        noData: '未找到结果，换个食材搜索试试？',
+        paths: 'auto',
+        depth: 3, // Headline depth, 1 - 6
+        hideOtherSidebarContent: false
       }
     }
   </script>
@@ -109,5 +117,7 @@
   <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
   <!-- Medium's 风格的图片缩放插件. 基于 medium-zoom。 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.js"></script>
 </body>
 </html>
