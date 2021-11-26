@@ -1,5 +1,4 @@
-- [README](README.md)
-- [README](README.md)
+- [首页](README.md)
 
 - 正餐食谱
   - [三明治](正餐食谱/三明治.md)
